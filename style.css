@@ -1,0 +1,199 @@
+/* Custom Fonts and Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --accent-color: #1E90FF;
+    --dark-bg: #121212;
+    --light-bg: #f8f9fa;
+    --text-color-light: #fff;
+    --text-color-dark: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--dark-bg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x800');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-section h1, .hero-section p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.custom-btn {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #1a7fe5;
+    border-color: #1a7fe5;
+    transform: translateY(-3px);
+}
+
+/* About Section */
+.profile-pic {
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Education Section (Flexbox Version) */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--accent-color);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.timeline-icon {
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
+
+
+/* Skills Section */
+.custom-progress-bar {
+    background-color: var(--accent-color);
+    transition: width 1s ease-in-out;
+}
+
+.skill-icon {
+    color: var(--accent-color);
+}
+
+/* Services Section */
+.service-card {
+    border-top: 5px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    border-top-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    color: var(--accent-color);
+}
+
+/* Projects Section */
+.project-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--dark-bg);
+}
+
+.btn-social {
+    color: var(--text-color-light);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-social:hover {
+    transform: translateY(-5px);
+    color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+}
+
+.animate__zoomIn {
+    animation-name: zoomIn;
+    animation-duration: 1s;
+}
+
+.animate__delay-1s {
+    animation-delay: 0.5s;
+}
+.animate__delay-2s {
+    animation-delay: 1s;
+}
+.animate__delay-3s {
+    animation-delay: 1.5s;
+}
+.animate__delay-4s {
+    animation-delay: 2s;
+}
+.animate__delay-5s {
+    animation-delay: 2.5s;
+}
+.animate__delay-6s {
+    animation-delay: 3s;
+}
+.animate__delay-7s {
+    animation-delay: 3.5s;
+}
